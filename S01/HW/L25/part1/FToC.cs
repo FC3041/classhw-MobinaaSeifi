@@ -2,20 +2,19 @@
 
 class FToC
 {
-    static void ftoc(double F)
+    static double Ftoc(double F)
     {
         double C = (F-32)*5/9;
         double RoundedC =Math.Round(C,2);
-        Console.WriteLine(RoundedC);
+        return RoundedC;
         //یا
         //double C = (F-32)*5/9;
         // string formattedC = C.ToString("F2");
-        // Console.WriteLine(formattedC);
-
+        // return formattedC;
     }
     static void Main(string[] args)
     {
-        ftoc(67);
+        Console.WriteLine(Ftoc(67));
     }
 }
 
