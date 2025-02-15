@@ -14,14 +14,14 @@ class Program
     {
         if(a>b)
         {
-            if(abs(a-b)<closeness*a)
+            if(abs(a-b)<closeness*abs(a))
                 return true;
             else
                 return false;
         }
         else
         {
-            if(abs(a-b)<closeness*b)
+            if(abs(a-b)<closeness*abs(b))
                 return true;
             else
                 return false;

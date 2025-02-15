@@ -48,21 +48,21 @@ class Program
         int x = 0;
         for(int i=1; i<monthnumber; i++)
             x+= days_in_month(i,year);
-        x += daynumber-1;
+        x += daynumber - 1;
         return x;
     }
     static int day_of_the_week(int year, int monthnumber, int daynumber)
 {
     // 1 January 2025 is a Wednesday (3)
-    int startDW = 3; // 0=Monday, 1=Tuesday, ..., 6=Sunday
+    int startDW = 3; // 0=Sunday, 1=Monday, ..., 6=Saturday
     int Passeddays = days_before_date(year, monthnumber, daynumber);
-    int dayOfWeek = (startDW + Passeddays) % 7;
-    return dayOfWeek;
+    int dayofWeek = (startDW + Passeddays) % 7;
+    return dayofWeek;
 }
     static void Main(string[] args)
     {
-        Console.WriteLine(days_before_date(2014,1,1));
-        Console.WriteLine(days_before_date(2014,2,1));
+        Console.WriteLine(day_of_the_week(2014,1,1));
+        Console.WriteLine(day_of_the_week(2014,2,1));
         Console.WriteLine(day_of_the_week(2014, 12, 25));
     }
 }
