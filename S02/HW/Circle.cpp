@@ -2,24 +2,6 @@
 #include<math.h>
 using namespace std;
 
-// class Point
-// {
-//     public:
-//         double x;
-//         double y;
-
-//     Point(double x1, double y1)
-//     {
-//         x = x1;
-//         y = y1;
-//     }
-
-//     ~ Point ()
-//     {
-
-//     }
-// };
-
 class Circle
 {
     public:
@@ -99,45 +81,20 @@ class Circle
 
 int main()
 {
-    // Circle c1(0,0,0);
-    //     c1.cx = 1;
-    //     c1.cy = 1;
-    //     c1.r = 2;
-
-    // Circle c2(0,0,0);
-    //     c2.cx = -1;
-    //     c2.cy = 1;
-    //     c2.r = 2;
-
-    // double p1 = c1.P();
-    // cout << p1<< endl;
-
-    // double p2 = c2.P();
-    // cout << p2<< endl;
-
-
-
-
-
-
-    // double c_dist = c1.c_distance(c2);
-    // cout << c_dist<< endl;
-
     double a;
     double b;
     double c;
-    cin>>a;
-    cin>>b;
-    cin>>c;
+    cout<<"Please write x of the center: ", cin>>a;
+    cout<<"Please write y of the center:", cin>>b;
+    cout<<"Please write r of the circle: ", cin>>c;
     Circle c1(a,b,c);
     double d;
     double e;
     double f;
-    cin>>d;
-    cin>>e;
-    cin>>f;
+    cout<<"Please write x of the center: ", cin>>d;
+    cout<<"Please write y of the center: ", cin>>e;
+    cout<<"Please write r of the circle: ", cin>>f;
     Circle c2(d,e,f);
-
 
 
     cout <<"perimeter c1: "<<c1.P()<<endl;
@@ -151,11 +108,10 @@ int main()
 
     double x;
     double y;
-    cout<< "Write x of a point to check is the point in the circle or not: ",cin>>x;
-    cout<< "Write y of a point to check is the point in the circle or not: ",cin>>y;
+    cout<< "Please write x of a point to check is the point in the circle or not: ",cin>>x;
+    cout<< "Please write y of a point to check is the point in the circle or not: ",cin>>y;
     cout<<"(circle c1)",c1.in_circle(x,y);
     cout<<"(circle c2)",c2.in_circle(x,y);
-    c2.in_circle(x,y);
     
     cout<<"distance of the point whit c1: "<<c1.points_distance(x,y)<<endl;
     cout<<"distance of the point whit c2: "<<c2.points_distance(x,y)<<endl;
