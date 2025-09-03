@@ -79,6 +79,11 @@ class Teacher: Citizen
         this.Rating = rraating;
         this.EmployeeId = eemployeeId;
     }
+    public override string ToString()
+    {
+        return $"{base.ToString()} - {this.Salary} -{this.Rating} -{this.EmployeeId}";
+    }
+
 }
 
 class GradStudent: Student

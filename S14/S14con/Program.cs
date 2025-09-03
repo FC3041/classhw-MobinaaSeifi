@@ -1,4 +1,4 @@
-﻿namespace class;
+﻿namespace S14con;
 
 class Program
 {
